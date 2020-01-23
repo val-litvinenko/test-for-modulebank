@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Тестовое задание</title>
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap&subset=cyrillic" rel="stylesheet">
+</head>
+<div class="container">
+
+  <body class="page">
+    <svg style="display: none">
+      <symbol viewBox="0 0 22 4" id="more">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M1.83333 0C0.820811 0 0 0.895431 0 2C0 3.10457 0.820811 4 1.83333 4C2.84586 4 3.66667 3.10457 3.66667 2C3.66667 0.895431 2.84586 0 1.83333 0ZM11 0C9.9875 0 9.16669 0.895431 9.16669 2C9.16669 3.10457 9.9875 4 11 4C12.0125 4 12.8334 3.10457 12.8334 2C12.8334 0.895431 12.0125 0 11 0ZM20.1666 0C19.1541 0 18.3333 0.895431 18.3333 2C18.3333 3.10457 19.1541 4 20.1666 4C21.1792 4 22 3.10457 22 2C22 0.895431 21.1792 0 20.1666 0Z"
+          fill="black" />
+      </symbol>
+      <symbol viewBox="0 0 42 42" id="add-new">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M21 42C32.598 42 42 32.598 42 21C42 9.40202 32.598 0 21 0C9.40202 0 0 9.40202 0 21C0 32.598 9.40202 42 21 42ZM20 12C20 11.4477 20.4477 11 21 11C21.5523 11 22 11.4477 22 12V20H30C30.5523 20 31 20.4477 31 21C31 21.5523 30.5523 22 30 22H22V30C22 30.5523 21.5523 31 21 31C20.4477 31 20 30.5523 20 30V22H12C11.4477 22 11 21.5523 11 21C11 20.4477 11.4477 20 12 20H20V12Z"
+          fill="white" />
+      </symbol>
+      <symbol viewBox="0 0 16 10" id="arrow">
+        <path id="Combined Shape" fill-rule="evenodd" clip-rule="evenodd"
+          d="M1.46439 1.46446C1.07388 1.85498 1.07388 2.48816 1.46439 2.87867L7.12125 8.53553C7.36032 8.77462 7.69034 8.86734 7.99997 8.81367C8.3096 8.86734 8.63956 8.77462 8.87863 8.53553L14.5355 2.87867C14.926 2.48816 14.926 1.85498 14.5355 1.46446C14.1449 1.07394 13.5118 1.07394 13.1212 1.46446L7.99997 6.58577L2.87863 1.46446C2.48807 1.07394 1.85495 1.07394 1.46439 1.46446Z"
+          fill="white" />
+      </symbol>
+      <symbol viewBox="0 0 25 26" id="bell">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M7.5 6C6.67157 6 6 6.65435 6 7.46154C6 7.52386 6.01567 7.58396 6.02344 7.64423C3.43046 8.28997 1.5 10.5847 1.5 13.3077V19.8846C1.5 20.2975 1.17377 20.6154 0.75 20.6154H0V22.0769H5.39062C5.30493 22.3077 5.25 22.5497 5.25 22.8077C5.25 24.0098 6.26624 25 7.5 25C8.73376 25 9.75 24.0098 9.75 22.8077C9.75 22.5497 9.69507 22.3077 9.60938 22.0769H15V20.6154H14.25C13.8262 20.6154 13.5 20.2975 13.5 19.8846V13.5132C13.5 10.7666 11.6176 8.31911 8.97656 7.64423C8.98433 7.58396 9 7.52386 9 7.46154C9 6.65435 8.32843 6 7.5 6ZM7.17188 8.92307C7.28099 8.91536 7.3888 8.92315 7.5 8.92307C7.54766 8.92304 7.59262 8.92167 7.64062 8.92307C10.0907 8.99472 12 11.0875 12 13.5132V19.8846C12 20.1426 12.0549 20.3846 12.1406 20.6154H2.85938C2.94507 20.3846 3 20.1426 3 19.8846V13.3077C3 10.9868 4.83364 9.08839 7.17188 8.92307ZM7.5 22.0769C7.9231 22.0769 8.25 22.3954 8.25 22.8077C8.25 23.2199 7.9231 23.5385 7.5 23.5385C7.0769 23.5385 6.75 23.2199 6.75 22.8077C6.75 22.3954 7.0769 22.0769 7.5 22.0769Z"
+          fill="white" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M16.5 16C20.6421 16 24 12.6421 24 8.5C24 4.35786 20.6421 1 16.5 1C12.3579 1 9 4.35786 9 8.5C9 12.6421 12.3579 16 16.5 16Z"
+          fill="#E54D4D" stroke="#37AEC1" stroke-width="2" />
+        <path
+          d="M16.2958 5.15C16.7492 5.15 17.1392 5.23333 17.4658 5.4C17.7992 5.56667 18.0525 5.79333 18.2258 6.08C18.3992 6.36667 18.4858 6.68667 18.4858 7.04C18.4858 7.42 18.4025 7.78667 18.2358 8.14C18.0758 8.48667 17.8058 8.87333 17.4258 9.3C17.0458 9.72667 16.4892 10.29 15.7558 10.99H18.6358L18.4958 12H14.3058V11.06C15.1592 10.1933 15.7692 9.55333 16.1358 9.14C16.5092 8.72 16.7725 8.36333 16.9258 8.07C17.0858 7.77 17.1658 7.46 17.1658 7.14C17.1658 6.83333 17.0758 6.59333 16.8958 6.42C16.7225 6.24667 16.4892 6.16 16.1958 6.16C15.9358 6.16 15.7058 6.21667 15.5058 6.33C15.3125 6.43667 15.1092 6.61667 14.8958 6.87L14.1158 6.25C14.6825 5.51667 15.4092 5.15 16.2958 5.15Z"
+          fill="white" />
+      </symbol>
+      <symbol viewBox="0 0 22 20" id="help">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M0 0V0.866035V14.7226V15.5886H0.846154H4.23077V18.1867V20L5.60577 18.8633L9.59856 15.5886H21.1538H22V14.7226V0.866035V0H21.1538H0.846154H0ZM1.69232 1.73206H20.3077V13.8565H9.30771H9.01684L8.77886 14.046L5.92309 16.3735V14.7226V13.8565H5.07694H1.69232V1.73206ZM13.0625 3.84302L11.8462 5.08794L13.6442 6.92827H5.9231V8.66034H13.6442L11.7933 10.5548L13.0096 11.7997L16.2885 8.41677L16.8967 7.7943L16.2885 7.17184L13.0625 3.84302Z"
+          fill="#2B2B2B" />
+      </symbol>
+      <symbol viewBox="0 0 24 24" id="qr">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M0.000494764 4.7997L0 0H4.7997L4.80069 4.7997H0.000494764ZM9.60114 0H14.4003H19.2001V4.7997H14.4003H9.60114V0ZM19.2001 9.59941V9.59966L14.4003 9.59966H9.60114V14.3989H14.4003V14.4013H19.2001V19.1996V23.9998H23.9993V19.1996V14.3989H19.2001V9.59966H23.9995L24 4.79971H19.2001H14.4003V9.59941H19.2001ZM9.60114 24V19.2L14.4003 19.1996V24H9.60114ZM9.60089 4.79971H4.80069V9.59941H9.60089V4.79971ZM4.7997 14.3989L4.80069 9.59966H9.60114V14.3989H4.7997ZM9.60089 19.2001V14.3989H4.7997H0V19.2001V23.9998H4.7997L4.7997 19.2001H9.60089ZM0.000494764 4.79971L0 9.59966L4.80069 9.59966L4.80069 4.79971H0.000494764Z"
+          fill="#00417B" />
+      </symbol>
+      <symbol viewBox="0 0 20 20" id="refresh">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M10 0V1.66667C14.6121 1.66667 18.3333 5.38789 18.3333 10C18.3333 14.6121 14.6121 18.3333 10 18.3333C5.38789 18.3333 1.66667 14.6121 1.66667 10C1.66667 7.27786 2.98751 4.87769 5 3.35938V7.5H6.66667V1.66667V0.833333H5.83333H0V2.5H3.41146C1.32783 4.33226 0 7.01412 0 10C0 15.5129 4.48711 20 10 20C15.5129 20 20 15.5129 20 10C20 4.48711 15.5129 0 10 0Z"
+          fill="black" />
+      </symbol>
+      <symbol viewBox="0 0 18 18" id="search">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M11.0012 0C7.14418 0 4.00243 3.14175 4.00243 6.99879C4.00243 8.67499 4.58959 10.2099 5.57716 11.4168L0 16.9939L1.00608 18L6.58323 12.4228C7.7901 13.4104 9.32501 13.9976 11.0012 13.9976C14.8582 13.9976 18 10.8558 18 6.99879C18 3.14175 14.8582 0 11.0012 0ZM11.0012 1.39976C14.1018 1.39976 16.6002 3.89824 16.6002 6.99879C16.6002 10.0993 14.1018 12.5978 11.0012 12.5978C7.90067 12.5978 5.40219 10.0993 5.40219 6.99879C5.40219 3.89824 7.90067 1.39976 11.0012 1.39976Z"
+          fill="#2B2B2B" />
+      </symbol>
+      <symbol viewBox="0 0 21 20" id="star">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M10.5 0L9.8366 1.51203L7.45752 6.84994L1.64706 7.4685L0 7.65178L1.23529 8.75143L5.55882 12.669L4.34641 18.3963L4.00327 20L5.44444 19.1753L10.5 16.2428L15.5556 19.1753L16.9967 20L16.6536 18.3963L15.4412 12.669L19.7647 8.75143L21 7.65178L19.3529 7.4685L13.5425 6.84994L11.1634 1.51203L10.5 0ZM10.5 3.5968L12.3758 7.83506L12.5588 8.22452L12.9706 8.27034L17.5687 8.75144L14.1373 11.8442L13.817 12.142L13.9085 12.5544L14.8693 17.0676L10.866 14.7766L10.5 14.5475L10.134 14.7766L6.13074 17.0676L7.09153 12.5544L7.18303 12.142L6.86277 11.8442L3.4314 8.75144L8.02944 8.27034L8.4412 8.22452L8.62421 7.83506L10.5 3.5968Z"
+          fill="#2B2B2B" />
+      </symbol>
+      <symbol viewBox="0 0 17 17" id="profile">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M8.5 0L8.32292 0.0442133L0.53125 2.16645L0 2.3212V2.85176V16.2926V17H0.708333H7.08333H7.79167V16.2926V14.1704H9.20833V16.2926V17H9.91667H16.2917H17V16.2926V2.85176V2.3212L16.4688 2.16645L8.67708 0.0442133L8.5 0ZM8.50002 1.45904L15.5834 3.38231V15.5852H10.625V13.4629V12.7555H9.91669H7.08335H6.37502V13.4629V15.5852H1.41669V3.38231L8.50002 1.45904ZM3.54169 4.26658V5.6814H4.95835V4.26658H3.54169ZM6.375 4.26658V5.6814H7.79167V4.26658H6.375ZM9.20831 4.26658V5.6814H10.625V4.26658H9.20831ZM12.0417 4.26658V5.6814H13.4584V4.26658H12.0417ZM3.54169 7.09623V8.51105H4.95835V7.09623H3.54169ZM6.375 7.09623V8.51105H7.79167V7.09623H6.375ZM9.20831 7.09623V8.51105H10.625V7.09623H9.20831ZM12.0417 7.09623V8.51105H13.4584V7.09623H12.0417ZM3.54169 9.92588V11.3407H4.95835V9.92588H3.54169ZM6.375 9.92588V11.3407H7.79167V9.92588H6.375ZM9.20831 9.92588V11.3407H10.625V9.92588H9.20831ZM12.0417 9.92588V11.3407H13.4584V9.92588H12.0417ZM3.54169 12.7555V14.1703H4.95835V12.7555H3.54169ZM12.0417 12.7555V14.1703H13.4584V12.7555H12.0417Z"
+          fill="white" />
+      </symbol>
+    </svg>
+    <header class="page-header">
+      <nav class="page-navigation">
+        <ul class="page-navigation__list">
+          <li class="page-navigation__item">
+            <svg width="24" height="24">
+              <use xlink:href="#qr"></use>
+            </svg>
+          </li>
+          <li class="page-navigation__item page-navigation__item--search">
+            <a href="#" onclick="event.preventDefault()">
+              <svg width="17" height="17">
+                <use xlink:href="#search"></use>
+              </svg>
+              <span>Поиск</span>
+            </a></li>
+          <li class="page-navigation__item page-navigation__item--main page-navigation__item--money">
+            <a href="#" onclick="event.preventDefault()">Деньги</a>
+          </li>
+          <li class="page-navigation__item page-navigation__item--main page-navigation__item--contacts">
+            <a href="#" onclick="event.preventDefault()">Контакты</a>
+          </li>
+          <li class="page-navigation__item page-navigation__item--main page-navigation__item--service">
+            <a href="#" onclick="event.preventDefault()">
+              <span>Услуги</span>
+              <svg width="8" height="5">
+                <use xlink:href="#arrow"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="page-navigation__item page-navigation__item--new-pay" aria-label="Новый платеж">
+            <a href="#" onclick="event.preventDefault()">
+              <svg width="42" height="42">
+                <use xlink:href="#add-new"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="page-navigation__item page-navigation__item--notifications" aria-label="Уведомления">
+            <a href="#" onclick="event.preventDefault()">
+              <svg width="25" height="26">
+                <use xlink:href="#bell"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="page-navigation__item">
+            <a href="#" onclick="event.preventDefault()">
+              <svg width="17" height="17">
+                <use xlink:href="#profile"></use>
+              </svg>
+              <span>ООО «РОДНЫЕ ПРОСТОРЫ»</span>
+              <svg width="8" height="5">
+                <use xlink:href="#arrow"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page-main">
+      <section class="modal">
+        <div class="modal__header">
+          <button class="modal__close" type="button" onclick="event.preventDefault()"></button>
+          <h1 class="modal__title">Платежное поручение № 5241234 от 23.09.2015</h1>
+        </div>
+        <div class="modal__wrapper baron__clipper baron baron__root _simple _scrollbar" id="wrapper">
+          <div class="modal__scroller baron__scroller" id="scroller">
+            <div class="modal__container" id="container">
+              <p class="modal__sum">– 23 500,00 ₽</p>
+              <p class="modal__text"><span>со счета:</span> Расчетный счет (***012345)</p>
+              <div class="modal__tiny-box"><span class="modal__text-label">ИСПОЛНЕН, 21 июня 15:33</span></div>
+              <div class="modal__box">
+                <div class="modal__requisites">
+                  <h2 class="modal__requisites-title">ООО "Родные просторы"</h2>
+                  <p class="modal__requisites-details">ИНН: 22341497819132</p>
+                  <p class="modal__requisites-details">Банк: ОАО Сбербанк</p>
+                  <p class="modal__requisites-details">БИК: 2352362365</p>
+                  <p class="modal__requisites-details">Счет: 40802810970010000395</p>
+                </div>
+                <ul class="modal__advantages">
+                  <li class="modal__advantages-item">
+                    <a href="#" onclick="event.preventDefault()">Высокая финансовая<br>устойчивость</a>
+                  </li>
+                  <li class="modal__advantages-item">
+                    <a href="#" onclick="event.preventDefault()">Высокая<br>благонадежность</a>
+                  </li>
+                  <li class="modal__advantages-item">
+                    <a href="#" onclick="event.preventDefault()">Кредитоспособность<br>44,5 млрд ₽</a>
+                  </li>
+                </ul>
+                <div class="modal__images">
+                  <img src="./image/pic-4.png" alt="уровень">
+                  <img src="./image/pic-5.png" alt="уровень">
+                  <img src="./image/pic-6.png" alt="уровень">
+                </div>
+              </div>
+              <div class="modal__desc">
+                <p>Оплата за партию ромашек и одуванчиков по договору 14023&nbsp;-&nbsp;023 от 14.05.2015 г. Сумма
+                  11430-00. В
+                  том числе НДС 18% - 1450,00 ₽</p>
+              </div>
+              <p class="modal__text-desc">Комиссия банка: 70 р.<br>
+                Размер комиссии рассчитан автоматически согласно тарифу вашей компании и является ознакомительным.
+                Точный
+                размер комиссии определяется после передачи платежного документа на обработку в банк.
+              </p>
+              <p class="modal__text-desc modal__text-desc--below">
+                Текст, чтобы продемонстрировать работу скролла.<br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at ante tincidunt, dapibus ipsum nec,
+                fringilla dui. Mauris sit amet mi eu dolor finibus varius. Nulla accumsan efficitur metus, quis sagittis
+                sem posuere vitae. In non quam vel magna dignissim ultrices. Sed ac diam varius, mollis dolor id,
+                blandit nunc. Fusce neque lacus, vehicula vitae convallis vel, tempus et sapien. Praesent ullamcorper
+                velit at maximus facilisis. Nulla facilisi. Quisque pulvinar magna nunc. Ut laoreet ligula non ligula
+                tincidunt, a imperdiet sem auctor. Quisque ac blandit augue, porttitor condimentum ante. Maecenas
+                suscipit magna nibh, congue feugiat nunc dapibus id. Duis sapien diam, ultrices vulputate orci ut,
+                semper dignissim ex. Duis ac dignissim purus. Duis malesuada felis sed nibh lacinia, et porttitor lectus
+                elementum.
+
+                Nunc interdum quis lacus ut accumsan. Nullam quis tincidunt elit, sed aliquam nisl. Proin lorem risus,
+                elementum at ante ac, faucibus dictum sapien. Donec et erat accumsan, sodales massa ullamcorper,
+                dignissim enim. Fusce cursus augue non sem venenatis, nec mattis turpis imperdiet. Suspendisse eget
+                laoreet augue, nec luctus orci. Sed feugiat nisi et sem dignissim varius. Ut eu ipsum nec ante tincidunt
+                accumsan sed id lectus. In ornare ultrices elit a dapibus.
+
+                Pellentesque volutpat dapibus tempus. Orci varius natoque penatibus et magnis dis parturient montes,
+                nascetur ridiculus mus. Etiam id tristique magna. Pellentesque et enim diam. Curabitur volutpat
+                vulputate eros eu cursus. Morbi at quam ac tellus gravida condimentum accumsan ac tellus. Integer
+                consectetur est id arcu porttitor porta. Nullam semper mi vel sem pharetra, a dictum tellus molestie.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel iaculis ipsum. Praesent turpis est,
+                mattis sed sapien a, aliquet porttitor eros.
+
+                Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam euismod, sapien ac posuere
+                accumsan, lectus metus accumsan tellus, eu cursus est lacus eu tellus. Maecenas venenatis nulla sit amet
+                ex faucibus, at tincidunt ligula vulputate. Quisque gravida mi diam, consectetur elementum lectus
+                suscipit vel. Quisque nec maximus elit, eu scelerisque diam. Aliquam vestibulum diam et euismod commodo.
+                Ut leo ipsum, pretium ut tempor a, placerat id justo. Fusce venenatis lacinia leo, eu elementum sapien
+                pulvinar porttitor. Fusce dapibus, nunc vel condimentum malesuada, velit augue fermentum nisl, at
+                fermentum tellus tellus eu eros. Etiam scelerisque fringilla lacinia. Vestibulum vel urna nisl. Sed et
+                vehicula mauris. Cras gravida volutpat consectetur. Nulla finibus vulputate odio nec ornare. Aliquam
+                auctor lacinia sapien, vitae blandit ipsum faucibus sit amet.
+
+                Cras tincidunt rhoncus augue ut pharetra. Fusce eu vestibulum odio, eu ultricies enim. Etiam convallis
+                accumsan ligula in commodo. Curabitur porta gravida ligula, at ornare dolor volutpat quis. Vivamus
+                sollicitudin lacinia lobortis. Curabitur placerat dolor vel mi pellentesque aliquet. Ut sit amet tortor
+                pulvinar, molestie nibh at, hendrerit ligula. Phasellus pretium justo sodales, semper sem vitae, porta
+                nibh. Nam non ipsum turpis. Integer eu ante lectus. Nunc sit amet iaculis ligula.</p>
+            </div>
+            <div class="baron__track">
+              <div class="baron__control baron__up">▲</div>
+              <div class="baron__free">
+                <div class="baron__bar"></div>
+              </div>
+              <div class="baron__control baron__down">▼</div>
+            </div>
+          </div>
+        </div>
+        <div class="modal__footer">
+          <ul class="modal__footer-list">
+            <li class="modal__footer-item">
+              <a href="#" onclick="event.preventDefault()">
+                <svg width="20" height="20">
+                  <use xlink:href="#refresh"></use>
+                </svg>
+                <span>Повторить</span>
+              </a>
+            </li>
+            <li class="modal__footer-item">
+              <a href="#" onclick="event.preventDefault()">
+                <svg width="21" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <span>В избранное</span>
+              </a>
+            </li>
+            <li class="modal__footer-item">
+              <a href="#" onclick="event.preventDefault()">
+                <svg width="22" height="20">
+                  <use xlink:href="#help"></use>
+                </svg>
+                <span>Спросить</span>
+              </a>
+            </li>
+            <li class="modal__footer-item">
+              <a href="#" onclick="event.preventDefault()">
+                <svg width="22" height="4">
+                  <use xlink:href="#more"></use>
+                </svg>
+                <span>Действия</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <script src="./js/baron.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</div>
+
+</html>

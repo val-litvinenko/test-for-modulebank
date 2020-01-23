@@ -1,0 +1,128 @@
+.page-navigation__list {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: url(/image/rectangle.png) no-repeat;
+  max-width: 1240px;
+  min-height: 20px;
+  padding: 14px 18px 14px 19px;
+  margin: 0 auto;
+}
+
+.page-navigation__item a {
+  color: $light-main;
+}
+
+.page-navigation__item {
+  padding-right: 35px;
+  text-transform: uppercase;
+  font-size: 14px;
+
+  &:first-child {
+    padding-top: 3px;
+    padding-right: 30px;
+  }
+  &--search svg{
+    padding-right: 10px;
+  }
+  &--search a {
+    color: $black-main;
+    display: flex;
+    align-items: center;
+  }
+  &--search {
+    padding-right: 88px;
+    width: 74px;
+    &:hover::before,
+    &:active::before {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      height: 5px;
+      width: 74px;
+      background-color: $label-main;
+    }
+  }
+  &--new-pay {
+    position: absolute;
+    top: 9px;
+    right: 50%;
+    margin-right: -63px;
+    &:hover,
+    &:active {
+      opacity: 0.7;
+    }
+  }
+  &--contacts {
+    width: 75px;
+    padding-right: 39px;
+    &:hover::before,
+    &:active::before {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      height: 5px;
+      width: 75px;
+      background-color: $label-main;
+    }
+  }
+  &--money {
+    width: 56px;
+    &:hover::before,
+    &:active::before {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      height: 5px;
+      width: 56px;
+      background-color: $label-main;
+    }
+  }
+  &--service {
+    width: 66px;
+    margin-right: auto;
+    &:hover::before,
+    &:active::before {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      height: 5px;
+      width: 66px;
+      background-color: $label-main;
+    }
+  }
+  &--service svg{
+    padding-bottom: 3px;
+  }
+  &--notifications {
+    padding-right: 41px;
+    &:hover,
+    &:active {
+      opacity: 0.9;
+      transform: scale(1.1);
+    }
+  }
+  &:last-child a {
+    display: flex;
+    align-items: center;
+  }
+  &:last-child svg:first-child{
+    padding-right: 10px;
+  }
+  &:last-child svg:last-child{
+    padding-left: 5px;
+  }
+  &:last-child{
+    padding-right: 0;
+    width: 225px;
+    &:hover::before,
+    &:active::before {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      height: 5px;
+      width: 225px;
+      background-color: $label-main;
+    }
+  }
+}

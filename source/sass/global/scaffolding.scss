@@ -1,0 +1,57 @@
+html {
+  font-family: 'Roboto', Arial, sans-serif;
+  color: $black-main;
+}
+
+body{
+  overflow-y: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+p,
+h1,
+h2 {
+    margin: 0;
+    padding: 0;
+  }
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.page-header {
+  position: relative;
+  background: linear-gradient(90deg, #00417B 0%, #237CB1 50%, #2580B2 50%, #46D2CC 100%);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.159392);
+}
+
+.page-main {
+  position: relative;
+  background-color: $background;
+}
