@@ -54,4 +54,9 @@ input[type="radio"].visually-hidden {
 .page-main {
   position: relative;
   background-color: $background;
+  height: 100vh;
+}
+
+.container {
+  min-width: 1024px;
 }

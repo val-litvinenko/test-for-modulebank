@@ -1,0 +1,24 @@
+.advantages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;;
+  margin-left: 70px;
+  margin-top: 10px;
+}
+
+.advantages__item {
+  font-size: 9px;
+  line-height: 12px;
+  text-align: center;
+  padding-bottom: 26px;
+}
+
+.advantages__link {
+  color: #9CBEDF;
+  text-align: center;
+  border-bottom: 1px dotted #9CBEDF;
+  &:hover,
+  &:active {
+    border-bottom: 1px solid #9CBEDF;
+  }
+}

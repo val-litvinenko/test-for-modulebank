@@ -34,9 +34,6 @@
         <path fill-rule="evenodd" clip-rule="evenodd"
           d="M16.5 16C20.6421 16 24 12.6421 24 8.5C24 4.35786 20.6421 1 16.5 1C12.3579 1 9 4.35786 9 8.5C9 12.6421 12.3579 16 16.5 16Z"
           fill="#E54D4D" stroke="#37AEC1" stroke-width="2" />
-        <path
-          d="M16.2958 5.15C16.7492 5.15 17.1392 5.23333 17.4658 5.4C17.7992 5.56667 18.0525 5.79333 18.2258 6.08C18.3992 6.36667 18.4858 6.68667 18.4858 7.04C18.4858 7.42 18.4025 7.78667 18.2358 8.14C18.0758 8.48667 17.8058 8.87333 17.4258 9.3C17.0458 9.72667 16.4892 10.29 15.7558 10.99H18.6358L18.4958 12H14.3058V11.06C15.1592 10.1933 15.7692 9.55333 16.1358 9.14C16.5092 8.72 16.7725 8.36333 16.9258 8.07C17.0858 7.77 17.1658 7.46 17.1658 7.14C17.1658 6.83333 17.0758 6.59333 16.8958 6.42C16.7225 6.24667 16.4892 6.16 16.1958 6.16C15.9358 6.16 15.7058 6.21667 15.5058 6.33C15.3125 6.43667 15.1092 6.61667 14.8958 6.87L14.1158 6.25C14.6825 5.51667 15.4092 5.15 16.2958 5.15Z"
-          fill="white" />
       </symbol>
       <symbol viewBox="0 0 22 20" id="help">
         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -78,20 +75,20 @@
             </svg>
           </li>
           <li class="page-navigation__item page-navigation__item--search">
-            <a href="#" onclick="event.preventDefault()">
+            <a class="page-navigation__link" href="#" onclick="event.preventDefault()">
               <svg width="17" height="17">
                 <use xlink:href="#search"></use>
               </svg>
               <span>Поиск</span>
             </a></li>
           <li class="page-navigation__item page-navigation__item--main page-navigation__item--money">
-            <a href="#" onclick="event.preventDefault()">Деньги</a>
+            <a class="page-navigation__link" href="#" onclick="event.preventDefault()">Деньги</a>
           </li>
           <li class="page-navigation__item page-navigation__item--main page-navigation__item--contacts">
-            <a href="#" onclick="event.preventDefault()">Контакты</a>
+            <a class="page-navigation__link" href="#" onclick="event.preventDefault()">Контакты</a>
           </li>
           <li class="page-navigation__item page-navigation__item--main page-navigation__item--service">
-            <a href="#" onclick="event.preventDefault()">
+            <a class="page-navigation__link" href="#" onclick="event.preventDefault()">
               <span>Услуги</span>
               <svg width="8" height="5">
                 <use xlink:href="#arrow"></use>
@@ -99,21 +96,22 @@
             </a>
           </li>
           <li class="page-navigation__item page-navigation__item--new-pay" aria-label="Новый платеж">
-            <a href="#" onclick="event.preventDefault()">
+            <a class="page-navigation__link" href="#" onclick="event.preventDefault()">
               <svg width="42" height="42">
                 <use xlink:href="#add-new"></use>
               </svg>
             </a>
           </li>
           <li class="page-navigation__item page-navigation__item--notifications" aria-label="Уведомления">
-            <a href="#" onclick="event.preventDefault()">
+            <a class="page-navigation__link" href="#" onclick="event.preventDefault()">
               <svg width="25" height="26">
                 <use xlink:href="#bell"></use>
               </svg>
+              <span class="page-navigation__link-num">5</span>
             </a>
           </li>
           <li class="page-navigation__item">
-            <a href="#" onclick="event.preventDefault()">
+            <a class="page-navigation__link" href="#" onclick="event.preventDefault()">
               <svg width="17" height="17">
                 <use xlink:href="#profile"></use>
               </svg>
@@ -134,46 +132,60 @@
         </div>
         <div class="modal__wrapper baron__clipper baron baron__root _simple _scrollbar" id="wrapper">
           <div class="modal__scroller baron__scroller" id="scroller">
-            <div class="modal__container" id="container">
-              <p class="modal__sum">– 23 500,00 ₽</p>
-              <p class="modal__text"><span>со счета:</span> Расчетный счет (***012345)</p>
-              <div class="modal__tiny-box"><span class="modal__text-label">ИСПОЛНЕН, 21 июня 15:33</span></div>
-              <div class="modal__box">
-                <div class="modal__requisites">
-                  <h2 class="modal__requisites-title">ООО "Родные просторы"</h2>
-                  <p class="modal__requisites-details">ИНН: 22341497819132</p>
-                  <p class="modal__requisites-details">Банк: ОАО Сбербанк</p>
-                  <p class="modal__requisites-details">БИК: 2352362365</p>
-                  <p class="modal__requisites-details">Счет: 40802810970010000395</p>
+            <div class="info" id="container">
+              <div class="info__pay">
+                <span class="info__pay-sum">– 23 500,00 ₽</span>
+                <span class="info__pay-text">
+                  <span class="info__pay-text-tiny">со счета:</span>
+                  Расчетный счет (***012345)</span>
+                <span class="info__text-label">
+                  <span class="info__label-status">Исполнен</span>, 21 июня 15:33</span>
+              </div>
+              <div class="info__card">
+                <div class="requisites">
+                  <h2 class="requisites__title">ООО "Родные просторы"</h2>
+                  <p class="requisites__details">ИНН: 22341497819132</p>
+                  <p class="requisites__details">Банк: ОАО Сбербанк</p>
+                  <p class="requisites__details">БИК: 2352362365</p>
+                  <p class="requisites__details">Счет: 40802810970010000395</p>
                 </div>
-                <ul class="modal__advantages">
-                  <li class="modal__advantages-item">
-                    <a href="#" onclick="event.preventDefault()">Высокая финансовая<br>устойчивость</a>
+                <ul class="advantages">
+                  <li class="advantages__item">
+                    <a class="advantages__link" href="#" onclick="event.preventDefault()">Высокая
+                      финансовая<br>устойчивость</a>
                   </li>
-                  <li class="modal__advantages-item">
-                    <a href="#" onclick="event.preventDefault()">Высокая<br>благонадежность</a>
+                  <li class="advantages__item">
+                    <a class="advantages__link" href="#" onclick="event.preventDefault()">Высокая<br>благонадежность</a>
                   </li>
-                  <li class="modal__advantages-item">
-                    <a href="#" onclick="event.preventDefault()">Кредитоспособность<br>44,5 млрд ₽</a>
+                  <li class="advantages__item">
+                    <a class="advantages__link" href="#" onclick="event.preventDefault()">Кредитоспособность<br>44,5
+                      млрд ₽</a>
                   </li>
                 </ul>
-                <div class="modal__images">
-                  <img src="./image/pic-4.png" alt="уровень">
-                  <img src="./image/pic-5.png" alt="уровень">
-                  <img src="./image/pic-6.png" alt="уровень">
+                <div class="rating">
+                  <div class="rating__circle">
+                    <span class="rating__num rating__num--two-sign">88</span>
+                  </div>
+                  <div class="rating__circle rating__circle--full">
+                    <span class="rating__num rating__num--three-sign">100</span>
+                  </div>
+                  <div class="rating__circle-fill">
+                    <span class="rating__num rating__num--one-sign rating__num--light rating__num--big">1</span>
+                    <span class="rating__text">Класс</span>
+                  </div>
                 </div>
               </div>
-              <div class="modal__desc">
-                <p>Оплата за партию ромашек и одуванчиков по договору 14023&nbsp;-&nbsp;023 от 14.05.2015 г. Сумма
+              <div class="info__desc">
+                <p class="info__desc-text">Оплата за партию ромашек и одуванчиков по договору 14023&nbsp;-&nbsp;023 от 14.05.2015 г. Сумма
                   11430-00. В
                   том числе НДС 18% - 1450,00 ₽</p>
               </div>
-              <p class="modal__text-desc">Комиссия банка: 70 р.<br>
+              <p class="info__text-desc">Комиссия банка: 70 р.<br>
                 Размер комиссии рассчитан автоматически согласно тарифу вашей компании и является ознакомительным.
                 Точный
                 размер комиссии определяется после передачи платежного документа на обработку в банк.
               </p>
-              <p class="modal__text-desc modal__text-desc--below">
+              <p class="info__text-desc info__text-desc--below">
                 Текст, чтобы продемонстрировать работу скролла.<br>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at ante tincidunt, dapibus ipsum nec,
                 fringilla dui. Mauris sit amet mi eu dolor finibus varius. Nulla accumsan efficitur metus, quis sagittis
@@ -226,35 +238,35 @@
         <div class="modal__footer">
           <ul class="modal__footer-list">
             <li class="modal__footer-item">
-              <a href="#" onclick="event.preventDefault()">
+              <a class="modal__footer-link" href="#" onclick="event.preventDefault()">
                 <svg width="20" height="20">
                   <use xlink:href="#refresh"></use>
                 </svg>
-                <span>Повторить</span>
+                <span class="modal__footer-desc">Повторить</span>
               </a>
             </li>
             <li class="modal__footer-item">
-              <a href="#" onclick="event.preventDefault()">
+              <a class="modal__footer-link" href="#" onclick="event.preventDefault()">
                 <svg width="21" height="20">
                   <use xlink:href="#star"></use>
                 </svg>
-                <span>В избранное</span>
+                <span class="modal__footer-desc">В избранное</span class="modal__footer-desc">
               </a>
             </li>
             <li class="modal__footer-item">
-              <a href="#" onclick="event.preventDefault()">
+              <a class="modal__footer-link" href="#" onclick="event.preventDefault()">
                 <svg width="22" height="20">
                   <use xlink:href="#help"></use>
                 </svg>
-                <span>Спросить</span>
+                <span class="modal__footer-desc">Спросить</span>
               </a>
             </li>
             <li class="modal__footer-item">
-              <a href="#" onclick="event.preventDefault()">
+              <a class="modal__footer-link" href="#" onclick="event.preventDefault()">
                 <svg width="22" height="4">
                   <use xlink:href="#more"></use>
                 </svg>
-                <span>Действия</span>
+                <span class="modal__footer-desc">Действия</span>
               </a>
             </li>
           </ul>
